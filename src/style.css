@@ -53,7 +53,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 2rem 4.5rem;
+    padding: 1rem 4.5rem;
 }
 
 #top .logo{
@@ -130,8 +130,8 @@ body{
     margin: .3rem .45rem;
     border-radius: .3rem;
     padding: .2rem .5rem;
-    font-size:.9rem;
-    line-height: .9rem;
+    font-size:.7rem;
+    line-height: .7rem;
 }
 
 #bottom .leftRight,#bottom .left, #bottom .right{
