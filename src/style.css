@@ -1,0 +1,146 @@
+@import url('https://fonts.font.im/css?family=Pacifico|Roboto');
+
+*{  
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    user-select: none;
+}
+
+:root{
+    font-weight: bold;
+    --font: 'Roboto', sans-serif;
+    --logo-font:'Pacifico', cursive;
+    --roundness: 0.5rem;
+    --bg-color: #111;
+    --main-color: #eee;
+    --caret-color: #eee;
+    --sub-color:#444;
+    --text-color: #eee;
+}
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font);
+    display: flex;
+    justify-content: center;
+}
+
+.textButton{
+    display: flex;
+    align-content: center;
+    color: var(--sub-color);
+    border: none;
+    border-radius: var(--roundness);
+    cursor: pointer;
+    height: min-content;
+    width: min-content;
+    text-align: center;
+    padding: .5rem;
+    font-size: 1rem;
+    transition: .125s;
+}
+
+.textButton .text{
+    margin-left: .4rem;
+}
+
+.cneterContent{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 4.5rem;
+}
+
+#top .logo{
+    display: flex;
+    align-items:baseline;
+    font-size: 2.5rem;
+    font-family: var(--logo-font);
+    font-weight: normal;
+    cursor: pointer;
+}
+#top .logo .text{
+    position: relative;
+    margin-left: .7rem;
+}
+#top .logo .text .top{
+    font-size: .65rem;
+    line-height: .65rem;
+    position: absolute;
+    top: 1rem;
+    left: .3rem;
+    color: var(--sub-color);
+}
+
+#center{
+    display: flex;
+    align-items: center;
+}
+.score {
+    font-family: var(--logo-font);
+    text-align: center;
+    width: 100%;
+    font-size: 10rem;
+    line-height: 10rem;
+    z-index: 10;
+
+}
+.score .count{
+    width: min-content;
+    transition: all .4s cubic-bezier(.5, .35, .15, 1.4);
+    margin: 0 auto;
+}
+
+.score .subtitle{
+    font-size: 2rem;
+    color: var(--sub-color);
+    line-height: 2rem;
+
+}
+#center{
+    display: flex;
+    justify-content: center;
+
+}
+#center .woodenfish{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#bottom{
+    color: var(--sub-color);
+    font-size: .95rem;
+    line-height: 1.2rem;
+    padding: 0 5px;
+    position: relative;
+    text-align: center;
+}
+
+#bottom .keyTips key{
+    color: var(--bg-color);
+    background-color: var(--sub-color);
+    display: inline-block;
+    margin: .3rem .45rem;
+    border-radius: .3rem;
+    padding: .2rem .5rem;
+    font-size:.9rem;
+    line-height: .9rem;
+}
+
+#bottom .leftRight,#bottom .left, #bottom .right{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+#bottom .textButton:hover{
+    color: var(--text-color);
+}
