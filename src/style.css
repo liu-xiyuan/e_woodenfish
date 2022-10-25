@@ -7,6 +7,8 @@
     box-sizing: border-box;
     text-decoration: none;
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance:none;
 }
 
 :root{
@@ -20,6 +22,7 @@
     --sub-color:#444;
     --text-color: #eee;
 }
+
 body{
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -47,7 +50,7 @@ body{
     margin-left: .4rem;
 }
 
-.cneterContent{
+.centerContent{
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -56,18 +59,25 @@ body{
     padding: 1rem 4.5rem;
 }
 
+#top{
+    display: flex;
+    flex-direction: column;
+}
+
 #top .logo{
     display: flex;
-    align-items:baseline;
+    align-items:center;
     font-size: 2.5rem;
     font-family: var(--logo-font);
     font-weight: normal;
     cursor: pointer;
 }
+
 #top .logo .text{
     position: relative;
     margin-left: .7rem;
 }
+
 #top .logo .text .top{
     font-size: .65rem;
     line-height: .65rem;
@@ -81,6 +91,7 @@ body{
     display: flex;
     align-items: center;
 }
+
 .score {
     font-family: var(--logo-font);
     text-align: center;
@@ -90,43 +101,52 @@ body{
     z-index: 10;
 
 }
+
 .score .count{
     width: min-content;
-    transition: all .4s cubic-bezier(.5, .35, .15, 1.4);
+    transition: all .1s cubic-bezier(.5, .35, .15, 1.4);
+    transform:scale(1);
     margin: 0 auto;
 }
 
 .score .subtitle{
     font-size: 2rem;
     color: var(--sub-color);
-    line-height: 2rem;
-
+    line-height: 2.5rem;
 }
+
 #center{
     display: flex;
     justify-content: center;
-
 }
+
 #center .woodenfish{
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: all .1s cubic-bezier(.5, .35, .15, 1.4);
+    transform:scale(1);
 }
 
 #bottom{
     color: var(--sub-color);
-    font-size: .95rem;
-    line-height: 1.2rem;
+    font-size: .9rem;
+    line-height: .9rem;
     padding: 0 5px;
     position: relative;
     text-align: center;
 }
 
+#bottom .keyTips {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #bottom .keyTips key{
     color: var(--bg-color);
     background-color: var(--sub-color);
-    display: inline-block;
     margin: .3rem .45rem;
     border-radius: .3rem;
     padding: .2rem .5rem;
@@ -138,9 +158,30 @@ body{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
 }
 
 #bottom .textButton:hover{
     color: var(--text-color);
+}
+
+@media only screen and (max-width: 700px){
+    .centerContent{
+        padding: 1rem 1rem;
+    }
+    #top{
+        align-items: center;
+    }
+    #top .text{
+        font-size: 2rem;
+       
+    }
+    #top .logo .text .top{
+        font-size: .6rem;
+        line-height: .6rem;
+        top: .6rem;
+        left: .1rem;
+    }
+    #bottom .leftRight{
+        margin-top: 2rem;
+    }
 }
