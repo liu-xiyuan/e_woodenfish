@@ -98,8 +98,6 @@ body{
     width: 100%;
     font-size: 10rem;
     line-height: 10rem;
-    z-index: 10;
-
 }
 
 .score .count{
@@ -168,19 +166,28 @@ body{
     .centerContent{
         padding: 1rem 1rem;
     }
+
     #top{
         align-items: center;
     }
+
     #top .text{
         font-size: 2rem;
        
     }
+
     #top .logo .text .top{
         font-size: .6rem;
         line-height: .6rem;
         top: .6rem;
         left: .1rem;
     }
+
+    .score .subtitle{
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
     #bottom .leftRight{
         margin-top: 2rem;
     }

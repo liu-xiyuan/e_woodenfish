@@ -26,12 +26,12 @@ let countFlag = false;
 
 function startAnimate() {
     $(".count").css("transform", "scale(1.1)");
-    // $(".woodenfish").css('transform', 'scale(.98)');
+    $(".woodenfish").css('transform', 'scale(.99)');
 }
 
 function initAnimate() {
     $(".count").css("transform", "scale(1)");
-    // $(".woodenfish").css('transform', 'scale(1)');
+    $(".woodenfish").css('transform', 'scale(1)');
 }
 
 function counter() {
@@ -64,12 +64,28 @@ $(document).keyup(function (e) {
     }
 });
 
-$(".woodenfish").mouseup(function () {
+// $(".woodenfish").mouseup(function () {
+//     initAnimate();
+// });
+
+// $(".woodenfish").mousedown(function () {
+//     counter();
+// });
+
+$(".woodenfish").on('touchstart',function(e) {
+    counter();
+
+})
+
+
+
+$(".woodenfish").on('touchmove',function(e) {
     initAnimate();
+
 });
 
-$(".woodenfish").mousedown(function () {
-    counter();
+$(".woodenfish").on('touchend',function(e) {
+    initAnimate();
 });
 
 $(".logo").click(function (e) {
