@@ -64,29 +64,27 @@ $(document).keyup(function (e) {
     }
 });
 
-// $(".woodenfish").mouseup(function () {
-//     initAnimate();
-// });
-
-// $(".woodenfish").mousedown(function () {
-//     counter();
-// });
-
-$(".woodenfish").on('touchstart',function(e) {
-    counter();
-
-})
-
-
-
-$(".woodenfish").on('touchmove',function(e) {
-    initAnimate();
-
-});
-
-$(".woodenfish").on('touchend',function(e) {
-    initAnimate();
-});
+if (typeof window.orientation !== 'undefined') {
+    $(".woodenfish").on('touchstart',function(e) {
+        counter();
+    })
+    
+    $(".woodenfish").on('touchmove',function(e) {
+        initAnimate();
+    });
+    
+    $(".woodenfish").on('touchend',function(e) {
+        initAnimate();
+    });
+}else{
+    $(".woodenfish").mouseup(function () {
+        initAnimate();
+    });
+    
+    $(".woodenfish").mousedown(function () {
+        counter();
+    });
+}
 
 $(".logo").click(function (e) {
     if (bgm.playing() && bgm.state().toString() == "loaded") {
