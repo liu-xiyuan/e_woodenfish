@@ -11,28 +11,23 @@
 都什么年代了? 还在敲传统木鱼, 快点击 鼠标/键盘 来积攒二进制功德吧!
 
 
+## 在线访问
 
-
-# 使用
+[CodePen](https://codepen.io/liuxiyuan/full/WNyemmR) | [GitHub Page](https://ewoodenfish.vercel.app/)
 
 ## 本地安装
 
 将源码拉到本地：
 
 ```
-git clone https://github.com/liuxiyuan-2022/EWoodenFish.git
+git clone https://github.com/liu-xiyuan/e_woodenfish.git
 ```
 
 或下载`.zip`压缩包，并解压到本地：
 
 ```
-https://github.com/liuxiyuan-2022/EWoodenFish/archive/refs/heads/main.zip
+https://github.com/liu-xiyuan/e_woodenfish/archive/refs/heads/main.zip
 ```
 
 打开`src/index.html`文件，开始积攒功德吧！
 
-## 在线访问
-
-[CodePen链接](https://codepen.io/liuxiyuan/full/WNyemmR)
-
-[GitHub Page](https://ewoodenfish.cloudpen.top/)
